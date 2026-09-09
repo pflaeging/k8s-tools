@@ -2,6 +2,18 @@
 
 A collection of small kubernetes tools. These tools are working in kubernetes, openshift and okd.
 
+Installation of the tools:
+
+- create a python virtual env
+- activate it
+- install requirements
+
+```shell
+python3 -m venv .venv
+. ./venv/bin/activate
+pip install -r requirements.txt
+```
+
 ## split_k8s.py
 
 If you're requesting objects from kubernetes or rendering via kustomize or helm template you get all objects in one single stream/file.
