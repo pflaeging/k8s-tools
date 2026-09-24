@@ -23,7 +23,7 @@ Invocation:
 
 ```shell
 ./split_k8s.py --help
-usage: split_k8s.py [-h] [-i INPUT] [-o OUTPUT_DIR] [-v] [--no-unwrap-lists]
+usage: split_k8s.py [-h] [-i INPUT] [-o OUTPUT_DIR] [-n] [-v] [--no-unwrap-lists]
 
 Split multi-document Kubernetes YAML files/streams into individual kind-name.yaml files.
 
@@ -32,6 +32,7 @@ options:
   -i, --input INPUT     Path to the multi-object YAML file. Reads from STDIN if omitted or set to '-'.
   -o, --output-dir OUTPUT_DIR
                         Target directory where split YAML files will be saved. Defaults to current directory.
+  -n, --namespaces      Enable handling of namespaces (namespace name as first parameter in filename).
   -v, --verbose         Enable verbose output (prints details for each saved or skipped file).
   --no-unwrap-lists     Disable unwrapping for 'kind: List' items. Saves the list wrapper as a single file instead.
 ```
